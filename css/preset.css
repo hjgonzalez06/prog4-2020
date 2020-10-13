@@ -1,0 +1,48 @@
+@charset 'utf-8';
+
+:root{
+    --blue-crayola: #0075F2;
+    --dark-pastel-green: #00CA4E;
+    --silver-chalice: #A9A9A9;
+    --cultured: #EFEFEF;
+    --white: #FFFFFF;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    line-height: 1.5;
+}
+
+html,body,h1,h2,h3,h4,h5,h6,p,ol,ul,li,pre,code,address,variable,fieldset,blockquote {
+    padding: 0;
+    margin: 0;
+    font-size: 10px;
+    font-weight: normal;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td, th, caption {
+    font-weight: normal;
+    text-align: justify;
+}
+
+img, fieldset {
+    border: 0;
+}
+
+ol {
+    padding-left: 1.5rem;
+    list-style: decimal;
+}
+
+ul {
+    padding-left: 1.5rem;
+    list-style: square;
+}

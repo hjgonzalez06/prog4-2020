@@ -1,0 +1,137 @@
+@charset 'utf-8';
+
+@import './preset.css'; /* LISTO */
+
+@import './grid-view.css'; /* LISTO */
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url('../assets/fonts/Ubuntu-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url('../assets/fonts/OpenSans-Regular.ttf');
+}
+
+#menu {
+    font-family: "Ubuntu";
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--blue-crayola);
+    color: var(--white);
+}
+
+#logo {
+    display: inline-flex;
+    align-items: center;
+}
+
+#logo img {
+    margin-right: 5px;
+}
+
+#logo figcaption {
+    font-size: 5rem;
+    font-weight: bolder;
+}
+
+#navbar {
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#list-group {
+    list-style: none;
+    display: inline-flex ;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-item {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: auto 15px;
+}
+
+.list-item > a {
+    text-decoration: none;
+    padding: 15px 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--white);
+}
+
+.list-item > a:hover {
+    text-decoration: none;
+    background-color: var(--white);
+    border-radius: 5px;
+    color: var(--blue-crayola);
+    transition: all 1s;
+}
+
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Open Sans";
+    background-color: var(--silver-chalice);
+}
+
+.footer-block {
+    display: block;
+    color: var(--white);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.footer-block::before {
+    background-color: var(--blue-crayola);
+    position: relative;
+    display: block;
+    content: "";
+    height: 2px;
+    width: 50px;
+    margin: 10px auto 20px;
+}
+
+.footer-block::after {
+    background-color: var(--blue-crayola);
+    position: relative;
+    display: block;
+    content: "";
+    height: 2px;
+    width: 50px;
+    margin: 20px auto 10px;
+}
+
+/* Extra small devices */
+@media screen and (max-width: 575.98px) {
+
+}
+
+/* Small devices */
+@media screen and (min-width: 576px) {
+
+}
+
+/* Medium devices */
+@media screen and (min-width: 768px) {
+
+}
+
+/* Large devices */
+@media screen and (min-width: 992px) {
+    
+}
+
+/* Extra large devices */
+@media screen and (min-width: 1200px) {
+    
+}
