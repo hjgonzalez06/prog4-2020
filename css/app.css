@@ -34,7 +34,7 @@
 }
 
 #logo figcaption {
-    font-size: 5rem;
+    font-size: 4.5rem;
     font-weight: bolder;
 }
 
@@ -54,7 +54,7 @@
 .list-item {
     font-size: 1.5rem;
     font-weight: bold;
-    margin: auto 15px;
+    margin: auto 10px;
 }
 
 .list-item > a {
