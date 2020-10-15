@@ -18,6 +18,10 @@
     src: url('../assets/fonts/OpenSans-Regular.ttf');
 }
 
+body {
+    font-family: "Open Sans";
+}
+
 /* Header */
 
 #menu {
@@ -114,7 +118,187 @@
     color: var(--dark-pastel-green);
 }
 
+/* Común para todas las secciones de la página */
 
+.section-padding {
+    padding: 90px 0 0 0;
+}
+
+.section-header {
+    display: block;
+}
+
+.section-title {
+    font-family: "Ubuntu";
+    font-size: 4.5rem;
+    line-height: 70px;
+    font-weight: 800;
+    text-align: center;
+    color: var(--blue-crayola);
+    margin-bottom: 25px;
+}
+
+.section-title::after {
+    background-color: var(--dark-pastel-green);
+    position: relative;
+    display: block;
+    content: "";
+    height: 3px;
+    width: 75px;
+    margin: 10px auto 20px;
+}
+
+.section-tagline {
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: center;
+    max-width: 550px;
+    margin: auto auto 80px auto;
+}
+
+/* Sección "Contacto" */
+
+#contact {
+    padding-top: 50px;
+    margin-bottom: 70px;
+}
+
+#contact .section-tagline {
+    margin-bottom: 50px;
+}
+
+#contact .container {
+    background-color: var(--cultured);
+    border-radius: 5px;
+    box-shadow: rgba(0,0,0,0.2) 5px 5px 10px 0px;
+}
+
+#contact-text {
+    position: relative;
+    text-align: justify;
+}
+
+#contact-text h3 {
+    margin: 10px 0;
+    font-size: 1.825rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 24px;
+}
+
+#contact-text p {
+    font-size: 1.65rem;
+    margin-bottom: 10px;
+}
+
+#contact-text p:last-child {
+    margin-bottom: 10px;
+}
+
+#contact-text hr {
+    margin: 25px 0;
+    width: 95%;
+    height: 0;
+    border: 1px var(--dark-pastel-green) solid;
+    clear: both;
+}
+
+#contact-text h4 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    line-height: 21px;
+    text-transform: uppercase;
+}
+
+#social-contact ul{
+    margin: 0;
+    list-style: none outside;
+}
+
+#social-contact ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 5px 15px 5px 0;
+}
+
+#social-contact ul li a{
+    text-align: center;
+    border-radius: 5px;
+    color: var(--blue-crayola);
+    font-size: 2rem;
+    border: 1px var(--dark-pastel-green) solid;
+    height: 32px;
+    line-height: 32px;
+    width: 32px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+#form .col {
+    position: relative;
+}
+
+input {
+    line-height: normal;
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 100;
+    outline: 0;
+    display: block;
+    max-width: 100%;
+    padding: 6px 15px;
+    border-radius: 5px;
+}
+
+textarea {
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-family: "Open Sans";
+    font-size: 1.5rem;
+    font-weight: 100;
+    outline: 0;
+    display: block;
+    max-width: 100%;
+    min-height: 50px;
+    overflow: auto;
+    resize: none;
+    border: 2px var(--silver-chalice) solid;
+    background-color: var(--white);
+}
+
+#form input[type="text"], #form input[type="email"] {
+    width: 100%;
+    height: 40px;
+    border: 2px var(--silver-chalice) solid;
+    background-color: var(--white);
+}
+
+#form input[type="text"]:focus,
+#form input[type="email"]:focus,
+#form textarea:focus {
+    border: 2px var(--dark-pastel-green) solid;
+}
+
+#form #send {
+    display: inline-block;
+    width: 100%;
+    padding: 15px 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 25px auto 0 auto;
+    color: var(--dark-pastel-green);
+    border: 2px var(--dark-pastel-green) solid;
+    border-radius: 5px;
+}
+
+#form #send:hover {
+    background-color: var(--dark-pastel-green);
+    color: var(--white);
+    font-weight: bolder;
+    border: 2px var(--silver-chalice) solid;
+    cursor: pointer;
+}
 
 /* Footer */
 

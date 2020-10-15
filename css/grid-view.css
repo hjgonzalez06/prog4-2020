@@ -1,9 +1,22 @@
 @charset 'utf-8';
 
+.container {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 90%;
+}
+
 .row::after {
     content: "";
     clear: both;
     display: table;
+}
+
+.col{
+    float: left;
+    margin: 0;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 [class*='col-'] {
