@@ -232,6 +232,44 @@ p {
     margin-top: 10px;
 }
 
+/* Sección Contenido Programático */
+
+#cp-download{
+    background-color: var(--blue-crayola);
+    margin-top: 50px;
+    padding: 50px 0;
+}
+
+#download-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#download-info h2{
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+#download-info a{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: var(--dark-pastel-green);
+    border: 2px var(--dark-pastel-green) solid;
+    border-radius: 5px;
+    letter-spacing: 1.5px;
+    padding: 10px 36px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#download-info a:hover{
+    color: var(--white);
+    background-color: var(--dark-pastel-green);
+}
+
 /* Sección "Contacto" */
 
 #contact {
@@ -367,7 +405,6 @@ textarea {
     background-color: var(--dark-pastel-green);
     color: var(--white);
     font-weight: bolder;
-    border: 2px var(--silver-chalice) solid;
     cursor: pointer;
 }
 
