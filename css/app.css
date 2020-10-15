@@ -1,8 +1,12 @@
-@charset 'utf-8';
+@charset 'utf-8'; /* Establecer codificación de caracteres */
 
-@import './preset.css'; /* LISTO */
+/* Importar hojas de estilo externas */
 
-@import './grid-view.css'; /* LISTO */
+@import './preset.css';
+
+@import './grid-view.css';
+
+/* Habilitar fuentes externas */
 
 @font-face {
     font-family: "Ubuntu";
@@ -13,6 +17,8 @@
     font-family: "Open Sans";
     src: url('../assets/fonts/OpenSans-Regular.ttf');
 }
+
+/* Header */
 
 #menu {
     font-family: "Ubuntu";
@@ -73,7 +79,44 @@
     transition: all 1s;
 }
 
+/* Mensaje de bienvenida */
 
+#welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../assets/images/image-2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 84vh;
+}
+
+#welcome-message {
+    font-family: "Ubuntu";
+    color: var(--white);
+}
+
+#welcome-message div {
+    text-align: left;
+    font-size: 3rem;
+}
+
+#welcome-message h1 {
+    text-align: center;
+    font-size: 7.75rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+#welcome-message h1 span {
+    color: var(--dark-pastel-green);
+}
+
+
+
+/* Footer */
 
 footer {
     display: flex;
@@ -92,22 +135,22 @@ footer {
 }
 
 .footer-block::before {
-    background-color: var(--blue-crayola);
+    background-color: var(--dark-pastel-green);
     position: relative;
     display: block;
     content: "";
-    height: 2px;
-    width: 50px;
-    margin: 10px auto 20px;
+    height: 3px;
+    width: 75px;
+    margin: 10px auto 15px;
 }
 
 .footer-block::after {
-    background-color: var(--blue-crayola);
+    background-color: var(--dark-pastel-green);
     position: relative;
     display: block;
     content: "";
-    height: 2px;
-    width: 50px;
+    height: 3px;
+    width: 75px;
     margin: 20px auto 10px;
 }
 
