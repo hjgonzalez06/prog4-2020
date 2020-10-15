@@ -224,6 +224,21 @@ p {
     width: 80px;
 }
 
+.skills img:hover {
+    animation: Stack-Spinner infinite 5s linear;
+}
+
+/* Animaciones de logos del stack */
+
+@keyframes Stack-Spinner {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 #lang figcaption {
     font-size: 1.75rem;
     font-weight: 600;
