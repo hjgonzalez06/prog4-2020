@@ -1,3 +1,5 @@
+![Logo Programación IV](assets/logos/logo.png)
+
 # <div align="center"> Repositorio de Sesiones Prácticas - Programación IV 2020 <div>
 
 Repositorio creado por el facilitador de la asignatura Programación IV de la carrera Ingeniería de Sistemas de la Universdad de Margarita, para subir códigos desarrollados en las sesiones prácticas.
@@ -11,4 +13,4 @@ Repositorio creado por el facilitador de la asignatura Programación IV de la ca
     
 #
 
-##### <div align="center"> © 2020 Hiram J. González & Universidad de Margarita. <br> Todos los derechos reservados. Protegido bajo licencia MIT. </div>
+##### <div align="center"> © 2020 Hiram J. González. <br> Todos los derechos reservados. Protegido bajo licencia MIT. </div>
