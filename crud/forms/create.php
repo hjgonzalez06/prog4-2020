@@ -1,3 +1,18 @@
+<?php
+
+    session_start();
+
+    if (!isset($_SESSION['usuario']) || !isset($_SESSION['account_id'])) {
+
+        header ('location: ../login/login.php');
+
+    }else if($_SESSION['role'] != 0){
+
+        header ('location: ../logout/logout.php');
+
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -28,6 +43,10 @@
             </div>
             <div class="form-group">
                 <input type="text" name="user" placeholder="Introduzca un nombre de usuario">
+                <select name="role" class="form-control">
+                    <option value="1">Regular</option>
+                    <option value="0">Administrador</option>
+                </select>
                 <input type="password" name="pass" placeholder="Introduzca su contraseña">
                 <input type="password" name="confirmPass" placeholder="Introduzca nuevamente la contraseña">
             </div>

@@ -22,7 +22,7 @@
     </header>
 
     <main class="row">
-        <form id="login" class="col-3" action="" method="" autocomplet="off">
+        <form id="login" class="col-3" action="redirect.php" method="post" autocomplet="off">
             <p><label >Nombre de Usuario</label></p>
             <input class="User" type="text" id="usuario" name="usuario" placeholder="Introduzca su usuario" autofocus="" required=""></p>
             <p><label>Contraseña</label></p>
