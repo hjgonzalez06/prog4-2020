@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 23-10-2020 a las 00:46:46
+-- Tiempo de generación: 31-10-2020 a las 03:53:29
 -- Versión del servidor: 5.7.24
 -- Versión de PHP: 7.2.19
 
@@ -35,7 +35,8 @@ CREATE TABLE `users` (
   `pass` varchar(255) NOT NULL,
   `fullname` varchar(45) NOT NULL,
   `email` varchar(30) NOT NULL,
-  `address` varchar(30) NOT NULL
+  `address` varchar(30) NOT NULL,
+  `role` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -56,7 +57,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `account_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  MODIFY `account_id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
