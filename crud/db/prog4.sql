@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 31-10-2020 a las 03:53:29
+-- Tiempo de generación: 05-11-2020 a las 01:30:56
 -- Versión del servidor: 5.7.24
 -- Versión de PHP: 7.2.19
 
@@ -40,6 +40,16 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Volcado de datos para la tabla `users`
+--
+
+INSERT INTO `users` (`account_id`, `username`, `pass`, `fullname`, `email`, `address`, `role`) VALUES
+(1, 'hjgonzalez06', '$2y$10$quYvLP9b9IA5odbYNJKsT.y4Wenvp9pMqtv2ZDPlKSpDfdVTpMdo.', 'Hiram Gonzalez', 'hgonzalez.4832@unimar.edu.ve', 'Juangriego', 0),
+(3, 'mgarcia', '$2y$10$yi/ee8gIGK03jFJn1ipjnelgVcllX/IT0NRgWgX0d7m.ADc2Wq4g2', 'Mariano Garc&iacute;a', 'mgarcia.7097@unimar.edu.ve', 'Guatamare', 1),
+(4, 'lgamboa', '$2y$10$EvpP8PIkB7LYF9oyj5iyVejgVwwVFoEm3DxOhqif/7rRhQGVGqTW2', 'Laura Gamboa', 'lgamboa.4799@unimar.edu.ve', 'Juangriego', 0),
+(5, 'fmoreno', '$2y$10$ayCWwdQnWmKiX.o.WgXmdOROslDaoIBFijnT13ra6UwRsGlmVGlaa', 'Franklin Moreno', 'fmoreno.5690@unimar.edu.ve', 'Villa Rosa', 1);
+
+--
 -- Índices para tablas volcadas
 --
 
@@ -57,7 +67,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `account_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `account_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

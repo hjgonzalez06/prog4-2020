@@ -1,0 +1,9 @@
+Nombre de usuarios (Admin):
+-hjgonzalez06
+-lgamboa
+
+Nombres de usuario (Regular):
+-mgarcia
+-fmoreno
+
+Contraseñas: user1234 (misma para todos los usuarios existentes actualmente).
