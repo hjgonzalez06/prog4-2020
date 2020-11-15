@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de Eventos | JavaScript</title>
+    <link rel="shortcut icon" href="../assets/logos/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/prism.css">
+    <link rel="stylesheet" href="./css/events.css">
+</head>
+<body>
+
+    <header id="menu" class="row">
+        <figure id="logo" class="col-4">
+            <img src="../assets/logos/logo.svg" alt="Logo">
+            <figcaption>Programación IV</figcaption>
+        </figure>
+        <nav id="navbar" class="col-7">
+            <ul id="list-group">
+                <li class="list-item"><a href="../index.html">Página principal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="row">
+        
+        <h1 class="title">Manejo de Eventos en JavaScript</h1>
+
+        <div class="content col-9">
+        
+            <!-- MODELO DE EVENTOS BÁSICO -->
+            <section id="basic" class="section-padding-top">
+
+                <h2 class="section-title">Modelo básico de eventos</h2>
+
+                <article id="inline" class="col col-11">
+
+                    <h3 class="subtitle">Manejadores como atributos de elementos HTML</h3>
+
+                    <figure class="col-9">
+                        <figcaption class="lang-name">HTML</figcaption>
+                        <script type="text/plain" class="language-markup line-numbers">
+                            <p onclick="this.style.borderColor='#0075F2'" onmouseout="this.style.borderColor='#00CA4E'">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Corrupti quo quisquam eius, saepe fuga ducimus dolores?
+                                Ea delectus, eveniet dicta praesentium ratione ex perspiciatis
+                                architecto, magnam qui, cumque nisi recusandae!
+                            </p>
+                        </script>    
+                    </figure>
+
+                    <!-- Para probar manejadores de eventos como atributos de elementos HTML -->
+                    
+                    <div class="example col-9">
+                        <span>Ahora prueba el código:</span>
+                        <p class="col-12" onclick="this.style.borderColor='#0075F2'"
+                                        onmouseout="this.style.borderColor='#00CA4E'">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti quo quisquam eius,
+                            saepe fuga ducimus dolores? Ea delectus, eveniet dicta praesentium ratione ex perspiciatis
+                            architecto, magnam qui, cumque nisi recusandae!
+                        </p>
+                    </div>
+
+                </article>
+
+                <hr>
+
+                <article id="outside" class="col col-11">
+
+                    <h3 class="subtitle">Manejadores como funciones externas</h3>
+
+                    <figure class="col-9">
+                        <figcaption class="lang-name">HTML</figcaption>
+                        <script type="text/plain" class="language-markup line-numbers">
+                            <button onclick="muestraMensaje()">
+                                Botón de Prueba
+                            </button>
+                        </script>    
+                    </figure>
+
+                    <figure class="col-9">
+                        <figcaption class="lang-name">JavaScript</figcaption>
+                        <script type="text/plain" class="language-javascript line-numbers">
+                            const muestraMensaje = () => {
+                                alert('Has hecho click en el Botón de Prueba');
+                            }
+                        </script>    
+                    </figure>
+                
+                    <!-- Para probar manejadores de eventos como funciones externas -->
+
+                    <div class="example col-9">
+                        <span>Ahora prueba el código:</span>
+                    </div>
+
+                    <button onclick="muestraMensaje()">
+                        Botón de Prueba
+                    </button>
+
+                </article>
+
+                <hr>
+
+                <article id="semantics" class="col col-11">
+
+                    <h3 class="subtitle">Manejadores semánticos</h3>
+
+                    <figure class="col-9">
+                        <figcaption class="lang-name">HTML</figcaption>
+                        <script type="text/plain" class="language-markup line-numbers">
+                            <p id="parrafo" class="col-9">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Corrupti quo quisquam eius, saepe fuga ducimus dolores?
+                                Ea delectus, eveniet dicta praesentium ratione ex perspiciatis
+                                architecto, magnam qui, cumque nisi recusandae!
+                            </p>
+                        </script>    
+                    </figure>
+
+                    <figure class="col-9">
+                        <figcaption class="lang-name">JavaScript</figcaption>
+                        <script type="text/plain" class="language-javascript line-numbers">
+                            window.onload = () => {
+
+                                let parrafo = document.getElementById('parrafo');
+                            
+                                /* Funciones que se ejecutan después de suceder el evento */
+                                const cambiarColor = () => {
+                                    parrafo.style.borderColor='#0075F2';
+                                };
+                            
+                                const volverColor = () => {
+                                    parrafo.style.borderColor='#00CA4E';
+                                };
+                            
+                                /* Podemos asociar distintos eventos a un mismo elemento */
+                                parrafo.onclick = cambiarColores;    // IMPORTANTE: Al asociar, no se colocan 
+                                                                     // los () después de los nombre de las
+                                parrafo.onmouseout = volverColores;  // funciones.
+                            
+                            }
+                        </script>    
+                    </figure>
+                    
+                    <!-- Para probar manejadores de eventos semánticos -->
+                    
+                    <div class="example col-9">
+                        <span>Ahora prueba el código:</span>
+                        <p id="parrafo" class="col-12">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Corrupti quo quisquam eius, saepe fuga ducimus dolores?
+                            Ea delectus, eveniet dicta praesentium ratione ex perspiciatis
+                            architecto, magnam qui, cumque nisi recusandae!
+                        </p>
+                    </div>
+    
+                </article>
+
+            </section>
+
+        </div>
+
+        <div class="content content-margin-top col-9">
+
+            <!-- MODELO DE EVENTOS ESTÁNDAR (DOM NIVEL 2) -->
+            <section id="standard"  class="section-padding-top">
+                
+                <h2 class="section-title">Modelo estándar de eventos</h2>
+
+                <article class="col col-11">
+
+                    <figure class="col-9">
+                        <figcaption class="lang-name">HTML</figcaption>
+                        <script type="text/plain" class="language-markup line-numbers">
+                            <button id="btn">
+                                Cambiar color de fondo
+                            </button>
+        
+                            <button id="btn2">
+                                Dejar de cambiar fondo
+                            </button>
+                        </script>    
+                    </figure>
+
+                    <figure class="col-9">
+                        <figcaption class="lang-name">JavaScript</figcaption>
+                        <script type="text/plain" class="language-javascript line-numbers">
+                            let btn = document.getElementById('btn'); // Seleccionamos el elemento al que asociaremos el evento.
+
+                            /* Funciones que se ejecutan después de suceder el evento */
+
+                            const random = number => {
+                                return Math.floor(Math.random() * (number + 1));
+                            };
+
+                            const cambiarFondo = () => {
+                                let randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+                                document.body.style.backgroundColor = randomColor;
+                            };
+
+                            /* Asociamos el evento al elemento del HTML */
+
+                            btn.addEventListener('click',cambiarFondo); // Hacemos uso de la función addEventListener.
+
+                            /* 
+                            * También se podría implementar la siguiente forma:
+                            *
+                            * btn.addEventListener('click', () => {
+                            *      let randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+                            *      document.body.style.backgroundColor = randomColor;
+                            * });
+                            */
+
+                            /* Desasociar eventos de un elemento */
+
+                            let btn2 = document.getElementById('btn2');
+
+                            btn2.addEventListener('click', () => {
+
+                                btn.removeEventListener('click',cambiarFondo); // Se usa la función removeEventListener.
+
+                            });
+                        </script>    
+                    </figure>
+
+                    <div class="example col-9">
+                        <span>Ahora prueba el código:</span>
+                        <div class="col-12">
+                            <button id="btn">
+                                Cambiar color de fondo
+                            </button>
+                            <button id="btn2">
+                                Dejar de cambiar fondo
+                            </button>
+                        </div>
+                    </div>
+
+                </article>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer class="col-12">
+        <div id="copyright">
+            <span class="footer-block">
+                &lt;&gt; por Hiram J. González
+                <br>
+                &copy; 2020 Programación IV | Universidad de Margarita
+            </span>
+        </div>
+    </footer>
+
+    <script src="./js/prism.js"></script>
+    <script src="./js/events.js"></script>
+
+</body>
+</html>
